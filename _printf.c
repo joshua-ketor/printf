@@ -6,7 +6,7 @@
  *
  * Return: Nothing
  */
-void _printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	char *string;
 	int num;
@@ -43,4 +43,5 @@ void _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
+	return (0);
 }
