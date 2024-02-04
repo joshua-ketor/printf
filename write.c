@@ -23,6 +23,8 @@ void _write_string(char *str)
  */
 void _write_int(int num)
 {
+	char *buffer, *p;
+
 	if (num == 0)
 	{
 		_putchar('0');
@@ -35,8 +37,8 @@ void _write_int(int num)
 		num = -num;
 	}
 
-	char *buffer = malloc(sizeof(int) * 3);
-	char *p = buffer + 11;
+	buffer = malloc(sizeof(int) * 3);
+	p = buffer + 11;
 	*p = '\0';
 
 	while (num > 0)
