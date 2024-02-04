@@ -8,6 +8,8 @@
  */
 void _printf(const char *format, ...)
 {
+	char *string;
+	int num;
 	va_list args;
 
 
@@ -20,12 +22,12 @@ void _printf(const char *format, ...)
 			switch (*format)
 			{
 				case 's':
-					char *string = va_arg(args, char *);
+					string = va_arg(args, char *);
 					_write_string(string);
 					break;
 
 				case 'd':
-					int num = va_arg(args, int);
+					num = va_arg(args, int);
 					_write_int(num);
 					break;
 
